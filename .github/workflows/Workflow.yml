@@ -8,10 +8,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Install powershell Module
-        run: Install-Module -Name AWS.Tools.CloudFormation -force
         shell: pwsh
+        run: Install-Module -Name AWS.Tools.CloudFormation -force
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::137150604440:role/RoleForGitHub
           aws-region: eu-west-1
