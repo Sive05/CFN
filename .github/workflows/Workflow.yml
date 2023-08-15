@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Install powershell Module
-        run: Install-Module -Name AWS.Tools.CloudFormation
+        run: Install-Module -Name AWS.Tools.CloudFormation -force
         shell: pwsh
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
