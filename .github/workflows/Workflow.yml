@@ -1,0 +1,21 @@
+name: Push CFN to AWS
+on: [workflow_dispatch]
+jobs:
+  Deploy:
+    name: Deploy the CFN
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+      - name: Install powershell Module
+        run: Install-Module -Name AWS.Tools.CloudFormation
+        shell: pwsh
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::123456789100:role/my-github-actions-role
+          aws-region: eu-west-1
+      - name: Call powershell script
+        run: pwsh Deploy.ps1
+  
+    
