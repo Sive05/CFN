@@ -1,4 +1,4 @@
-$ErrorActionPreference = "continue"
+$ErrorActionPreference = "stop"
 
 $name = "VpcFromCfn"
 $templatebody = get-content cfn.yml -Raw
