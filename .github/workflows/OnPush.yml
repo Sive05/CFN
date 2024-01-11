@@ -1,4 +1,4 @@
-name: push cfn in AWS
+name: push cfn in AWS on PUSH
 on: [workflow_dispatch]
 
 env:
