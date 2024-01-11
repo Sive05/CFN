@@ -1,3 +1,4 @@
+<#
 $ErrorActionPreference = "Stop"
 
 $name = "VpcFromCfn"
@@ -10,3 +11,5 @@ else{
 
 New-CFNStack -StackName $name -TemplateBody $templatebody
 }
+#>
+get-CFNStack
