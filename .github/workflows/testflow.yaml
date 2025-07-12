@@ -8,7 +8,7 @@ jobs:
     name: Deploy the CFN
     runs-on: ubuntu-latest
     steps:
-      - run: apt-get isntall -y awscli
+      - run: apt-get install -y awscli
       - run: aws sts get-caller-identity
 
   
