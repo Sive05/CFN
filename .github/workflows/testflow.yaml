@@ -1,0 +1,15 @@
+name: Push CFN to AWS
+on: [workflow_dispatch]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  Deploy:
+    name: Deploy the CFN
+    runs-on: ubuntu-latest
+    steps:
+      - run: yum install awscli -y
+      - run: aws sts get-caller-identity
+
+  
+    
