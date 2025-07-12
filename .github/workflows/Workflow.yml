@@ -16,7 +16,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::137150604440:role/GitHub-Role
+          role-to-assume: arn:aws:iam::975049918973:role/GitHub-Role
           aws-region: eu-west-1
       - name: Call powershell script
         run: pwsh Deploy.ps1
